@@ -41,6 +41,10 @@ let game = {
         this.clearCards();
     },
 
+    checkGameOver() {
+        return this.cards.filter((card) => !card.flipped).length == 0;
+    },
+
     techs: [
         "bootstrap",
         "css",
@@ -53,6 +57,7 @@ let game = {
         "node",
         "react",
     ],
+    
     cards: null,
 
     createCardsFromTechs: function () {
